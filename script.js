@@ -40,7 +40,6 @@ card.style.transform="translateY(0)"
 
 })
 
-}
 
 // переключение темы
 
