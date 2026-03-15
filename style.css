@@ -8,9 +8,25 @@ body{
 
 font-family:Segoe UI;
 
-background:linear-gradient(180deg,#eef2ff,#f8fafc);
-
+background:#f5f7ff;
 color:#333;
+
+transition:0.4s;
+
+}
+
+/* DARK THEME */
+
+body.dark{
+
+background:#1e1e2f;
+color:#eee;
+
+}
+
+body.dark .card{
+
+background:#2a2a3d;
 
 }
 
@@ -29,7 +45,7 @@ text-align:center;
 
 color:white;
 
-background:linear-gradient(135deg,#2563eb,#1e3a8a);
+background:linear-gradient(135deg,#6366f1,#4338ca);
 
 }
 
@@ -43,14 +59,14 @@ margin-bottom:15px;
 header p{
 
 font-size:20px;
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
 .btn{
 
 background:white;
-color:#1e3a8a;
+color:#4338ca;
 
 padding:12px 25px;
 
@@ -58,15 +74,24 @@ border-radius:8px;
 
 text-decoration:none;
 
-font-weight:bold;
-
-transition:0.3s;
+margin-bottom:15px;
 
 }
 
-.btn:hover{
+/* THEME BUTTON */
 
-transform:scale(1.1);
+.theme-btn{
+
+padding:10px 20px;
+border:none;
+
+background:#111;
+
+color:white;
+
+border-radius:6px;
+
+cursor:pointer;
 
 }
 
@@ -74,7 +99,7 @@ transform:scale(1.1);
 
 nav{
 
-background:#1e40af;
+background:#4338ca;
 padding:15px;
 text-align:center;
 
@@ -114,12 +139,6 @@ border-radius:12px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 
-opacity:0;
-
-transform:translateY(30px);
-
-transition:0.6s;
-
 }
 
 /* BUTTON */
@@ -134,7 +153,7 @@ border:none;
 
 border-radius:6px;
 
-background:#2563eb;
+background:#6366f1;
 
 color:white;
 
@@ -142,17 +161,11 @@ cursor:pointer;
 
 }
 
-button:hover{
-
-background:#1e40af;
-
-}
-
 /* FOOTER */
 
 footer{
 
-background:#1e40af;
+background:#4338ca;
 
 color:white;
 
