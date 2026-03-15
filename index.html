@@ -7,7 +7,7 @@
 
 <title>Заработок школьников</title>
 
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 
 </head>
 
@@ -20,7 +20,7 @@
 
 <a href="#about" class="btn">Узнать больше</a>
 
-<button class="theme-btn" onclick="toggleTheme()">🌙 Тёмная тема</button>
+<button class="theme-btn" onclick="toggleTheme()">🌙 Переключить тему</button>
 
 </header>
 
@@ -39,7 +39,7 @@
 
 <div class="card" id="about">
 
-<h2>💼 Почему школьники хотят зарабатывать?</h2>
+<h2>Почему школьники хотят зарабатывать?</h2>
 
 <p>
 Сегодня многие школьники хотят иметь собственные деньги.
@@ -50,18 +50,17 @@
 
 <div class="card" id="law">
 
-<h2>⚖️ Закон</h2>
+<h2>Закон</h2>
 
 <p>
-Во многих странах работать можно с 14 лет,
-но с ограничениями по времени и типу работы.
+Во многих странах работать можно с 14 лет.
 </p>
 
 </div>
 
 <div class="card" id="work">
 
-<h2>💻 Варианты заработка</h2>
+<h2>Варианты заработка</h2>
 
 <ul>
 
@@ -77,23 +76,22 @@
 
 <div class="card" id="risk">
 
-<h2>⚠️ Риски</h2>
+<h2>Риски</h2>
 
 <p>
 В интернете можно встретить мошенников.
-Всегда нужно проверять предложения работы.
 </p>
 
 </div>
 
 <div class="card" id="test">
 
-<h2>🧠 Мини-тест</h2>
+<h2>Мини-тест</h2>
 
-<p>Можно ли школьнику работать с 14 лет?</p>
+<p>Можно ли работать с 14 лет?</p>
 
-<button onclick="answer('yes')">Да</button>
-<button onclick="answer('no')">Нет</button>
+<button onclick="checkAnswer(true)">Да</button>
+<button onclick="checkAnswer(false)">Нет</button>
 
 <p id="result"></p>
 
@@ -101,7 +99,7 @@
 
 <div class="card" id="author">
 
-<h2>👨‍💻 Автор проекта</h2>
+<h2>Автор</h2>
 
 <p>Беляевский Максим</p>
 
