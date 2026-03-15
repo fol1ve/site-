@@ -1,8 +1,8 @@
 // плавная прокрутка
 
-document.querySelectorAll("nav a").forEach(link => {
+document.querySelectorAll("nav a").forEach(link=>{
 
-link.addEventListener("click", function(e){
+link.addEventListener("click",function(e){
 
 e.preventDefault()
 
@@ -17,25 +17,44 @@ behavior:"smooth"
 })
 
 
-// анимация карточек
+// анимация появления
 
-const cards = document.querySelectorAll(".card")
+const cards=document.querySelectorAll(".card")
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-cards.forEach(card => {
+cards.forEach(card=>{
 
-const position = card.getBoundingClientRect().top
+const position=card.getBoundingClientRect().top
 
-const screen = window.innerHeight
+const screen=window.innerHeight
 
-if(position < screen - 100){
+if(position<screen-100){
 
-card.style.opacity = 1
-card.style.transform = "translateY(0)"
+card.style.opacity=1
+card.style.transform="translateY(0)"
 
 }
 
 })
 
 })
+
+
+// тест
+
+function answer(correct){
+
+let result=document.getElementById("result")
+
+if(correct){
+
+result.innerHTML="✅ Правильно!"
+
+}else{
+
+result.innerHTML="❌ Неправильно"
+
+}
+
+}
