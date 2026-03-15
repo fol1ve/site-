@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Заработок школьников</title>
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -12,7 +12,7 @@
   <h1>Заработок школьников</h1>
   <p>Возможности, закон и риски</p>
   <a href="#about" class="btn">Узнать больше</a>
-  <button class="theme-btn" onclick="toggleTheme()">🌙 Переключить тему</button>
+  <button class="theme-btn">🌙 Переключить тему</button>
 </header>
 
 <nav>
@@ -55,8 +55,8 @@
   <div class="card" id="test">
     <h2>Мини-тест</h2>
     <p>Можно ли работать с 14 лет?</p>
-    <button onclick="checkAnswer(true)">Да</button>
-    <button onclick="checkAnswer(false)">Нет</button>
+    <button data-answer="true">Да</button>
+    <button data-answer="false">Нет</button>
     <p id="result"></p>
   </div>
 
@@ -71,6 +71,6 @@
   <p>© 2026 Школьный проект</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=9" defer></script>
 </body>
 </html>
