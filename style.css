@@ -1,0 +1,125 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Segoe UI;
+background:#f2f6ff;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+background:linear-gradient(135deg,#2563eb,#1e3a8a);
+}
+
+header h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+header p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+
+background:white;
+color:#1e3a8a;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+
+transition:0.3s;
+}
+
+.btn:hover{
+
+background:#e0e7ff;
+transform:scale(1.05);
+
+}
+
+/* NAV */
+
+nav{
+
+background:#1e40af;
+padding:15px;
+text-align:center;
+
+}
+
+nav a{
+
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
+
+}
+
+/* CONTENT */
+
+.container{
+
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+
+}
+
+/* CARDS */
+
+.card{
+
+background:white;
+padding:25px;
+margin-bottom:25px;
+
+border-radius:12px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* AUTHOR */
+
+.author{
+
+font-weight:bold;
+margin-top:10px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#1e40af;
+color:white;
+text-align:center;
+padding:20px;
+
+}
