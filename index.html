@@ -1,119 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Заработок школьников</title>
-
-<link rel="stylesheet" href="style.css?v=6">
-
+<link rel="stylesheet" href="style.css?v=7">
 </head>
-
 <body>
 
 <header>
-
-<h1>Заработок школьников</h1>
-<p>Возможности, закон и риски</p>
-
-<a href="#about" class="btn">Узнать больше</a>
-
-<button class="theme-btn" onclick="toggleTheme()">🌙 Переключить тему</button>
-
+  <h1>Заработок школьников</h1>
+  <p>Возможности, закон и риски</p>
+  <a href="#about" class="btn">Узнать больше</a>
+  <button class="theme-btn" onclick="toggleTheme()">🌙 Переключить тему</button>
 </header>
 
 <nav>
-
-<a href="#about">О теме</a>
-<a href="#law">Закон</a>
-<a href="#work">Заработок</a>
-<a href="#risk">Риски</a>
-<a href="#test">Тест</a>
-<a href="#author">Автор</a>
-
+  <a href="#about">О теме</a>
+  <a href="#law">Закон</a>
+  <a href="#work">Заработок</a>
+  <a href="#risk">Риски</a>
+  <a href="#test">Тест</a>
+  <a href="#author">Автор</a>
 </nav>
 
 <section class="container">
 
-<div class="card" id="about">
+  <div class="card" id="about">
+    <h2>Почему школьники хотят зарабатывать?</h2>
+    <p>Сегодня многие школьники хотят иметь собственные деньги. Это помогает стать более самостоятельными и получить первый опыт работы.</p>
+  </div>
 
-<h2>Почему школьники хотят зарабатывать?</h2>
+  <div class="card" id="law">
+    <h2>Закон</h2>
+    <p>Во многих странах работать можно с 14 лет.</p>
+  </div>
 
-<p>
-Сегодня многие школьники хотят иметь собственные деньги.
-Это помогает стать более самостоятельными и получить первый опыт работы.
-</p>
+  <div class="card" id="work">
+    <h2>Варианты заработка</h2>
+    <ul>
+      <li>Создание сайтов</li>
+      <li>Монтаж видео</li>
+      <li>Помощь соседям</li>
+      <li>Репетиторство</li>
+      <li>Продажа вещей онлайн</li>
+    </ul>
+  </div>
 
-</div>
+  <div class="card" id="risk">
+    <h2>Риски</h2>
+    <p>В интернете можно встретить мошенников.</p>
+  </div>
 
-<div class="card" id="law">
+  <div class="card" id="test">
+    <h2>Мини-тест</h2>
+    <p>Можно ли работать с 14 лет?</p>
+    <button onclick="checkAnswer(true)">Да</button>
+    <button onclick="checkAnswer(false)">Нет</button>
+    <p id="result"></p>
+  </div>
 
-<h2>Закон</h2>
-
-<p>
-Во многих странах работать можно с 14 лет.
-</p>
-
-</div>
-
-<div class="card" id="work">
-
-<h2>Варианты заработка</h2>
-
-<ul>
-
-<li>Создание сайтов</li>
-<li>Монтаж видео</li>
-<li>Помощь соседям</li>
-<li>Репетиторство</li>
-<li>Продажа вещей онлайн</li>
-
-</ul>
-
-</div>
-
-<div class="card" id="risk">
-
-<h2>Риски</h2>
-
-<p>
-В интернете можно встретить мошенников.
-</p>
-
-</div>
-
-<div class="card" id="test">
-
-<h2>Мини-тест</h2>
-
-<p>Можно ли работать с 14 лет?</p>
-
-<button onclick="checkAnswer(true)">Да</button>
-<button onclick="checkAnswer(false)">Нет</button>
-
-<p id="result"></p>
-
-</div>
-
-<div class="card" id="author">
-
-<h2>Автор</h2>
-
-<p>Беляевский Максим</p>
-
-</div>
+  <div class="card" id="author">
+    <h2>Автор</h2>
+    <p>Беляевский Максим</p>
+  </div>
 
 </section>
 
 <footer>
-
-<p>© 2026 Школьный проект</p>
-
+  <p>© 2026 Школьный проект</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
