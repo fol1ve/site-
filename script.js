@@ -40,21 +40,30 @@ card.style.transform="translateY(0)"
 
 })
 
-
+}
 // тест
 
-function answer(correct){
+function answer(choice){
 
 let result=document.getElementById("result")
 
-if(correct){
+if(choice==="yes"){
 
-result.innerHTML="✅ Правильно!"
+result.innerHTML="✅ Правильно! С 14 лет можно работать."
 
 }else{
 
-result.innerHTML="❌ Неправильно"
+result.innerHTML="❌ Неправильно. Можно работать с 14 лет."
 
 }
+
+}
+
+
+// темная тема
+
+function toggleTheme(){
+
+document.body.classList.toggle("dark")
 
 }
