@@ -6,13 +6,87 @@
   <title>Заработок школьников | Возможности и карьера</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./style.css?v=8">
   <base target="_blank">
 </head>
 <body>
 
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
 <!-- Floating particles -->
 <div class="particles" id="particles"></div>
+
+<!-- Calculator Modal -->
+<div class="modal-overlay" id="calculatorModal">
+  <div class="modal">
+    <button class="modal-close" id="closeCalculator">
+      <i class="fas fa-times"></i>
+    </button>
+    <h3 class="modal-title">
+      <i class="fas fa-calculator"></i>
+      Калькулятор заработка
+    </h3>
+
+    <div class="calc-form">
+      <div class="calc-group">
+        <label>Тип работы</label>
+        <select id="workType">
+          <option value="500">Репетиторство (500₽/час)</option>
+          <option value="300">Фриланс (300₽/час)</option>
+          <option value="200">Помощь соседям (200₽/час)</option>
+          <option value="400">Монтаж видео (400₽/час)</option>
+          <option value="250">Копирайтинг (250₽/час)</option>
+          <option value="150">Продажи handmade (150₽/час)</option>
+        </select>
+      </div>
+
+      <div class="calc-group">
+        <label>Часов в неделю: <span id="hoursValue" class="calc-highlight">5</span></label>
+        <input type="range" id="hoursPerWeek" min="1" max="20" value="5" class="calc-slider">
+        <div class="calc-range-labels">
+          <span>1 час</span>
+          <span>20 часов</span>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calculateBtn">
+        <i class="fas fa-calculator"></i>
+        Рассчитать
+      </button>
+
+      <div class="calc-result" id="calcResult" style="display: none;">
+        <div class="calc-result-title">Ваш потенциальный доход:</div>
+        <div class="calc-result-amount" id="resultAmount">0₽</div>
+        <div class="calc-result-details">
+          <div class="calc-detail">
+            <span>В неделю:</span>
+            <strong id="weeklyAmount">0₽</strong>
+          </div>
+          <div class="calc-detail">
+            <span>В месяц:</span>
+            <strong id="monthlyAmount">0₽</strong>
+          </div>
+          <div class="calc-detail">
+            <span>За год:</span>
+            <strong id="yearlyAmount">0₽</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Calculator Floating Button -->
+<button class="calc-floating-btn" id="openCalculator" title="Калькулятор заработка">
+  <i class="fas fa-calculator"></i>
+  <span class="calc-floating-text">Рассчитать заработок</span>
+</button>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" title="Наверх">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <!-- Navigation -->
 <nav id="navbar">
@@ -100,6 +174,75 @@
       </div>
       <h2>Финансовая грамотность</h2>
       <p>Управление собственным доходом учит планировать бюджет, откладывать деньги и понимать ценность труда.</p>
+    </div>
+  </div>
+
+  <!-- Success Stories Section -->
+  <div class="section-header reveal">
+    <span class="section-tag">Истории успеха</span>
+    <h2 class="section-title">Как это работает на практике</h2>
+    <p class="section-subtitle">Реальные примеры школьников, которые начали зарабатывать</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card story-card reveal">
+      <div class="story-image">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <div class="story-content">
+        <h3>Артём, 15 лет</h3>
+        <p class="story-text">"За 3 месяца фриланса вёрстки сайтов накопил на новый iPhone. Начинал с простых лендингов за 1000₽, сейчас беру заказы по 5000-8000₽"</p>
+        <div class="story-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="45000">0</span>
+            <span class="stat-label">₽ заработано</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="12">0</span>
+            <span class="stat-label">заказов</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card story-card reveal">
+      <div class="story-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="story-content">
+        <h3>Соня, 14 лет</h3>
+        <p class="story-text">"Репетиторство по математике младшим школьникам. 2 часа в неделю = 4000₽ в месяц. Помогаю другим и учусь сама!"</p>
+        <div class="story-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="24000">0</span>
+            <span class="stat-label">₽ заработано</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">учеников</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card story-card reveal">
+      <div class="story-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+        <i class="fas fa-video"></i>
+      </div>
+      <div class="story-content">
+        <h3>Макс, 16 лет</h3>
+        <p class="story-text">"Монтаж видео для блогеров. Один ролик за 2 часа = 1500₽. За месяц сделал 20 видео и купил камеру для стримов"</p>
+        <div class="story-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="30000">0</span>
+            <span class="stat-label">₽ заработано</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="20">0</span>
+            <span class="stat-label">видео</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -210,19 +353,28 @@
   </div>
 
   <div class="test-container reveal" id="test">
-    <div class="test-question">
+    <div class="test-progress">
+      <div class="test-progress-bar" id="testProgress"></div>
+    </div>
+    <div class="test-counter" id="testCounter">Вопрос 1 из 5</div>
+
+    <div class="test-question" id="questionText">
       <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 0.5rem;"></i>
       Можно ли официально работать в России с 14 лет?
     </div>
-    <div class="test-buttons">
-      <button class="test-btn test-btn-yes" data-answer="true">
+    <div class="test-buttons" id="testButtons">
+      <button class="test-btn test-btn-yes" data-answer="true" data-correct="true">
         <i class="fas fa-check"></i> Да
       </button>
       <button class="test-btn test-btn-no" data-answer="false">
         <i class="fas fa-times"></i> Нет
       </button>
     </div>
-    <p id="result"></p>
+    <div id="result"></div>
+
+    <div class="test-navigation" id="testNavigation" style="display: none;">
+      <button class="test-nav-btn" id="nextQuestion">Следующий вопрос <i class="fas fa-arrow-right"></i></button>
+    </div>
   </div>
 
   <!-- Author Section -->
