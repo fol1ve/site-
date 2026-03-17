@@ -6,16 +6,13 @@
   <title>Заработок школьников | Возможности и карьера</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=10">
   <base target="_blank">
 </head>
 <body>
 
 <!-- Progress Bar -->
 <div class="progress-bar" id="progressBar"></div>
-
-<!-- Floating particles -->
-<div class="particles" id="particles"></div>
 
 <!-- Calculator Modal -->
 <div class="modal-overlay" id="calculatorModal">
@@ -80,7 +77,7 @@
 <!-- Calculator Floating Button -->
 <button class="calc-floating-btn" id="openCalculator" title="Калькулятор заработка">
   <i class="fas fa-calculator"></i>
-  <span class="calc-floating-text">Рассчитать заработок</span>
+  <span class="calc-floating-text">Рассчитать</span>
 </button>
 
 <!-- Back to Top Button -->
@@ -106,21 +103,6 @@
 
 <!-- Hero Section -->
 <header>
-  <div class="hero-float-cards">
-    <div class="float-card">
-      <i class="fas fa-laptop-code" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
-      <div style="font-weight: 700;">Freelance</div>
-    </div>
-    <div class="float-card">
-      <i class="fas fa-graduation-cap" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
-      <div style="font-weight: 700;">Обучение</div>
-    </div>
-    <div class="float-card">
-      <i class="fas fa-shield-alt" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
-      <div style="font-weight: 700;">Безопасность</div>
-    </div>
-  </div>
-
   <div class="hero-content">
     <div class="hero-badge">
       <i class="fas fa-star"></i>
@@ -157,7 +139,7 @@
         <i class="fas fa-lightbulb"></i>
       </div>
       <h2>Самостоятельность</h2>
-      <p>Собственные деньги помогают школьникам стать более самостоятельными и ответственными. Это первый шаг к взрослой жизни и финансовой независимости.</p>
+      <p>Собственные деньги помогают школьникам стать более самостоятельными и ответственными.</p>
     </div>
 
     <div class="card reveal">
@@ -165,7 +147,7 @@
         <i class="fas fa-briefcase"></i>
       </div>
       <h2>Опыт работы</h2>
-      <p>Ранний карьерный старт даёт бесценный опыт, который пригодится в будущем. Работа teaches time management, коммуникацию и профессиональную этику.</p>
+      <p>Ранний карьерный старт даёт бесценный опыт, который пригодится в будущем.</p>
     </div>
 
     <div class="card reveal">
@@ -173,25 +155,24 @@
         <i class="fas fa-piggy-bank"></i>
       </div>
       <h2>Финансовая грамотность</h2>
-      <p>Управление собственным доходом учит планировать бюджет, откладывать деньги и понимать ценность труда.</p>
+      <p>Управление собственным доходом учит планировать бюджет и откладывать деньги.</p>
     </div>
   </div>
 
-  <!-- Success Stories Section -->
+  <!-- Success Stories -->
   <div class="section-header reveal">
     <span class="section-tag">Истории успеха</span>
     <h2 class="section-title">Как это работает на практике</h2>
-    <p class="section-subtitle">Реальные примеры школьников, которые начали зарабатывать</p>
   </div>
 
   <div class="cards-grid">
     <div class="card story-card reveal">
-      <div class="story-image">
+      <div class="story-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
         <i class="fas fa-mobile-alt"></i>
       </div>
       <div class="story-content">
         <h3>Артём, 15 лет</h3>
-        <p class="story-text">"За 3 месяца фриланса вёрстки сайтов накопил на новый iPhone. Начинал с простых лендингов за 1000₽, сейчас беру заказы по 5000-8000₽"</p>
+        <p class="story-text">"За 3 месяца фриланса вёрстки сайтов накопил на новый iPhone."</p>
         <div class="story-stats">
           <div class="stat">
             <span class="stat-number" data-target="45000">0</span>
@@ -211,7 +192,7 @@
       </div>
       <div class="story-content">
         <h3>Соня, 14 лет</h3>
-        <p class="story-text">"Репетиторство по математике младшим школьникам. 2 часа в неделю = 4000₽ в месяц. Помогаю другим и учусь сама!"</p>
+        <p class="story-text">"Репетиторство по математике. 2 часа в неделю = 4000₽ в месяц."</p>
         <div class="story-stats">
           <div class="stat">
             <span class="stat-number" data-target="24000">0</span>
@@ -231,7 +212,7 @@
       </div>
       <div class="story-content">
         <h3>Макс, 16 лет</h3>
-        <p class="story-text">"Монтаж видео для блогеров. Один ролик за 2 часа = 1500₽. За месяц сделал 20 видео и купил камеру для стримов"</p>
+        <p class="story-text">"Монтаж видео для блогеров. За месяц сделал 20 видео."</p>
         <div class="story-stats">
           <div class="stat">
             <span class="stat-number" data-target="30000">0</span>
@@ -250,7 +231,6 @@
   <div class="section-header reveal">
     <span class="section-tag">Юридическая информация</span>
     <h2 class="section-title">Законодательство</h2>
-    <p class="section-subtitle">Важно знать свои права и ограничения</p>
   </div>
 
   <div class="card law-card reveal" id="law">
@@ -259,12 +239,11 @@
       Трудовой кодекс РФ
     </div>
     <h2>Возрастные ограничения</h2>
-    <p>В России официально трудоустроиться можно с <strong>14 лет</strong> с согласия одного из родителей (опекуна). При этом есть важные нюансы:</p>
-    <ul style="margin-top: 1rem;">
+    <p>В России официально трудоустроиться можно с <strong>14 лет</strong> с согласия родителей:</p>
+    <ul>
       <li>С 14 лет — можно работать в свободное от учёбы время</li>
       <li>С 15 лет — разрешена работа без ограничений по времени</li>
       <li>С 16 лет — полная трудоспособность</li>
-      <li>Запрещена тяжёлая работа и вредные условия</li>
       <li>Рабочий день не более 4-5 часов для школьников</li>
     </ul>
   </div>
@@ -273,7 +252,6 @@
   <div class="section-header reveal">
     <span class="section-tag">Возможности</span>
     <h2 class="section-title">Варианты заработка</h2>
-    <p class="section-subtitle">Современные способы заработка для школьников</p>
   </div>
 
   <div class="card reveal" id="work">
@@ -285,32 +263,26 @@
       <div class="work-item">
         <i class="fas fa-code"></i>
         <h4>Создание сайтов</h4>
-        <p>Вёрстка, дизайн, программирование</p>
       </div>
       <div class="work-item">
         <i class="fas fa-video"></i>
         <h4>Монтаж видео</h4>
-        <p>YouTube, TikTok, Reels</p>
       </div>
       <div class="work-item">
         <i class="fas fa-hands-helping"></i>
         <h4>Помощь соседям</h4>
-        <p>Выгул собак, уборка, помощь</p>
       </div>
       <div class="work-item">
         <i class="fas fa-chalkboard-teacher"></i>
         <h4>Репетиторство</h4>
-        <p>Помощь младшим школьникам</p>
       </div>
       <div class="work-item">
         <i class="fas fa-shopping-bag"></i>
         <h4>Продажа онлайн</h4>
-        <p>Handmade, перепродажи</p>
       </div>
       <div class="work-item">
         <i class="fas fa-pen-nib"></i>
         <h4>Копирайтинг</h4>
-        <p>Статьи, тексты, переводы</p>
       </div>
     </div>
   </div>
@@ -319,7 +291,6 @@
   <div class="section-header reveal">
     <span class="section-tag">Безопасность</span>
     <h2 class="section-title">Риски и мошенничество</h2>
-    <p class="section-subtitle">Как защитить себя и свои деньги</p>
   </div>
 
   <div class="card reveal" id="risk">
@@ -327,21 +298,17 @@
       <i class="fas fa-shield-alt"></i>
     </div>
     <h2>Будьте бдительны!</h2>
-    <p>В интернете существует множество схем мошенничества, нацеленных на неопытных пользователей. Вот основные признаки опасности:</p>
-
     <div class="risk-alert">
       <i class="fas fa-exclamation-triangle"></i>
       <div>
-        <strong>Красные флаги:</strong> предоплата за "гарантированный" заработок, запрос личных данных, слишком высокая оплата за простую работу, отсутствие договора.
+        <strong>Красные флаги:</strong> предоплата за "гарантированный" заработок, запрос личных данных, слишком высокая оплата за простую работу.
       </div>
     </div>
-
-    <ul style="margin-top: 1.5rem;">
+    <ul>
       <li>Никогда не переводите деньги для "получения" работы</li>
       <li>Проверяйте репутацию заказчика на фриланс-биржах</li>
-      <li>Используйте безопасные сделки (фриланс-платформы)</li>
-      <li>Не сообщайте данные банковских карт и пароли</li>
-      <li>Составляйте простые договоры даже для мелких заказов</li>
+      <li>Используйте безопасные сделки</li>
+      <li>Не сообщайте данные банковских карт</li>
     </ul>
   </div>
 
@@ -349,7 +316,6 @@
   <div class="section-header reveal">
     <span class="section-tag">Проверка знаний</span>
     <h2 class="section-title">Мини-тест</h2>
-    <p class="section-subtitle">Проверьте, что вы узнали из этого материала</p>
   </div>
 
   <div class="test-container reveal" id="test">
@@ -359,21 +325,22 @@
     <div class="test-counter" id="testCounter">Вопрос 1 из 5</div>
 
     <div class="test-question" id="questionText">
-      <i class="fas fa-question-circle" style="color: var(--primary); margin-right: 0.5rem;"></i>
       Можно ли официально работать в России с 14 лет?
     </div>
     <div class="test-buttons" id="testButtons">
-      <button class="test-btn test-btn-yes" data-answer="true" data-correct="true">
+      <button class="test-btn test-btn-yes" onclick="checkAnswer(true)">
         <i class="fas fa-check"></i> Да
       </button>
-      <button class="test-btn test-btn-no" data-answer="false">
+      <button class="test-btn test-btn-no" onclick="checkAnswer(false)">
         <i class="fas fa-times"></i> Нет
       </button>
     </div>
     <div id="result"></div>
 
     <div class="test-navigation" id="testNavigation" style="display: none;">
-      <button class="test-nav-btn" id="nextQuestion">Следующий вопрос <i class="fas fa-arrow-right"></i></button>
+      <button class="test-nav-btn" onclick="nextQuestion()">
+        Следующий вопрос <i class="fas fa-arrow-right"></i>
+      </button>
     </div>
   </div>
 
@@ -388,16 +355,8 @@
       <i class="fas fa-user"></i>
     </div>
     <h2>Беляевский Максим</h2>
-    <p style="font-size: 1.1rem; margin-bottom: 1rem;">Автор школьного проекта</p>
-    <p>Этот проект создан для помощи школьникам в поиске законных способов заработка и повышении финансовой грамотности.</p>
-    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
-      <span style="background: rgba(99, 102, 241, 0.1); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem;">
-        <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i>2026 год
-      </span>
-      <span style="background: rgba(16, 185, 129, 0.1); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--success);">
-        <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>Актуально
-      </span>
-    </div>
+    <p>Автор школьного проекта</p>
+    <p>Этот проект создан для помощи школьникам в поиске законных способов заработка.</p>
   </div>
 
 </section>
@@ -406,14 +365,11 @@
 <footer>
   <div class="footer-content">
     <div class="footer-logo">💰 Заработок школьников</div>
-    <p class="footer-text">© 2026 Школьный проект | Беляевский Максим</p>
-    <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.9rem;">
-      <i class="fas fa-heart" style="color: var(--accent);"></i> Сделано с любовью к знаниям
-    </p>
+    <p>© 2026 Школьный проект | Беляевский Максим</p>
   </div>
 </footer>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
