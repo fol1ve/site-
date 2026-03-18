@@ -6,28 +6,29 @@
   <title>Заработок школьников | Возможности и карьера</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=20">
   <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
 <!-- Progress Bar -->
-<div class="progress-bar" id="progressBar"></div>
+<div class="progress-bar" id="progressBar" role="progressbar" aria-label="Прогресс прокрутки страницы"></div>
 
 <!-- Calculator Modal -->
-<div class="modal-overlay" id="calculatorModal">
+<div class="modal-overlay" id="calculatorModal" role="dialog" aria-modal="true" aria-labelledby="calcTitle">
   <div class="modal">
-    <button class="modal-close" id="closeCalculator">
-      <i class="fas fa-times"></i>
+    <button class="modal-close" id="closeCalculator" aria-label="Закрыть калькулятор">
+      <i class="fas fa-times" aria-hidden="true"></i>
     </button>
-    <h3 class="modal-title">
-      <i class="fas fa-calculator"></i>
+    <h3 class="modal-title" id="calcTitle">
+      <i class="fas fa-calculator" aria-hidden="true"></i>
       Калькулятор заработка
     </h3>
 
     <div class="calc-form">
       <div class="calc-group">
-        <label>Тип работы</label>
+        <label for="workType">Тип работы</label>
         <select id="workType">
           <option value="500">Репетиторство (500₽/час)</option>
           <option value="300">Фриланс (300₽/час)</option>
@@ -39,20 +40,29 @@
       </div>
 
       <div class="calc-group">
-        <label>Часов в неделю: <span id="hoursValue" class="calc-highlight">5</span></label>
-        <input type="range" id="hoursPerWeek" min="1" max="20" value="5" class="calc-slider">
+        <label for="hoursPerWeek">Часов в неделю: <span id="hoursValue" class="calc-highlight">5</span></label>
+        <input type="range" id="hoursPerWeek" min="1" max="20" value="5" class="calc-slider" aria-describedby="hoursHint">
         <div class="calc-range-labels">
           <span>1 час</span>
           <span>20 часов</span>
         </div>
+        <p id="hoursHint" class="sr-only">Выберите количество часов от 1 до 20</p>
+
+        <!-- Quick select buttons -->
+        <div class="calc-quick-buttons">
+          <button type="button" class="calc-quick-btn" data-hours="5">5 ч</button>
+          <button type="button" class="calc-quick-btn" data-hours="10">10 ч</button>
+          <button type="button" class="calc-quick-btn" data-hours="15">15 ч</button>
+          <button type="button" class="calc-quick-btn" data-hours="20">20 ч</button>
+        </div>
       </div>
 
       <button class="calc-btn" id="calculateBtn">
-        <i class="fas fa-calculator"></i>
+        <i class="fas fa-calculator" aria-hidden="true"></i>
         Рассчитать
       </button>
 
-      <div class="calc-result" id="calcResult" style="display: none;">
+      <div class="calc-result" id="calcResult" style="display: none;" role="status" aria-live="polite">
         <div class="calc-result-title">Ваш потенциальный доход:</div>
         <div class="calc-result-amount" id="resultAmount">0₽</div>
         <div class="calc-result-details">
@@ -75,48 +85,72 @@
 </div>
 
 <!-- Calculator Floating Button -->
-<button class="calc-floating-btn" id="openCalculator" title="Калькулятор заработка">
-  <i class="fas fa-calculator"></i>
+<button class="calc-floating-btn" id="openCalculator" title="Калькулятор заработка" aria-label="Открыть калькулятор заработка">
+  <i class="fas fa-calculator" aria-hidden="true"></i>
   <span class="calc-floating-text">Рассчитать</span>
 </button>
 
 <!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" title="Наверх">
-  <i class="fas fa-arrow-up"></i>
+<button class="back-to-top" id="backToTop" title="Наверх" aria-label="Вернуться наверх">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
 </button>
 
 <!-- Navigation -->
-<nav id="navbar">
+<nav id="navbar" role="navigation" aria-label="Главное меню">
   <div class="nav-logo">💰 Заработок</div>
-  <ul class="nav-links">
-    <li><a href="#about">О проекте</a></li>
-    <li><a href="#law">Закон</a></li>
-    <li><a href="#work">Заработок</a></li>
-    <li><a href="#risk">Безопасность</a></li>
-    <li><a href="#test">Тест</a></li>
-    <li><a href="#author">Автор</a></li>
+
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+    <i class="fas fa-bars" aria-hidden="true"></i>
+  </button>
+
+  <ul class="nav-links" role="menubar">
+    <li role="none"><a href="#about" role="menuitem">О проекте</a></li>
+    <li role="none"><a href="#law" role="menuitem">Закон</a></li>
+    <li role="none"><a href="#work" role="menuitem">Заработок</a></li>
+    <li role="none"><a href="#risk" role="menuitem">Безопасность</a></li>
+    <li role="none"><a href="#test" role="menuitem">Тест</a></li>
+    <li role="none"><a href="#author" role="menuitem">Автор</a></li>
   </ul>
-  <button class="theme-toggle" id="themeToggle">
-    <i class="fas fa-moon"></i>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+    <i class="fas fa-moon" aria-hidden="true"></i>
   </button>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть меню">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="#about"><i class="fas fa-info-circle"></i> О проекте</a></li>
+      <li><a href="#law"><i class="fas fa-gavel"></i> Закон</a></li>
+      <li><a href="#work"><i class="fas fa-briefcase"></i> Заработок</a></li>
+      <li><a href="#risk"><i class="fas fa-shield-alt"></i> Безопасность</a></li>
+      <li><a href="#test"><i class="fas fa-check-circle"></i> Тест</a></li>
+      <li><a href="#author"><i class="fas fa-user"></i> Автор</a></li>
+    </ul>
+  </div>
+</div>
 
 <!-- Hero Section -->
 <header>
   <div class="hero-content">
     <div class="hero-badge">
-      <i class="fas fa-star"></i>
+      <i class="fas fa-star" aria-hidden="true"></i>
       Школьный проект 2026
     </div>
     <h1>Заработок школьников</h1>
     <p class="hero-subtitle">Возможности, закон и риски. Первые шаги к финансовой независимости уже в школьные годы.</p>
     <div class="hero-buttons">
       <a href="#about" class="btn btn-primary">
-        <i class="fas fa-rocket"></i>
+        <i class="fas fa-rocket" aria-hidden="true"></i>
         Начать путь
       </a>
       <a href="#test" class="btn btn-secondary">
-        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
         Пройти тест
       </a>
     </div>
@@ -136,7 +170,7 @@
   <div class="cards-grid">
     <div class="card reveal" id="about">
       <div class="card-icon">
-        <i class="fas fa-lightbulb"></i>
+        <i class="fas fa-lightbulb" aria-hidden="true"></i>
       </div>
       <h2>Самостоятельность</h2>
       <p>Собственные деньги помогают школьникам стать более самостоятельными и ответственными.</p>
@@ -144,7 +178,7 @@
 
     <div class="card reveal">
       <div class="card-icon">
-        <i class="fas fa-briefcase"></i>
+        <i class="fas fa-briefcase" aria-hidden="true"></i>
       </div>
       <h2>Опыт работы</h2>
       <p>Ранний карьерный старт даёт бесценный опыт, который пригодится в будущем.</p>
@@ -152,7 +186,7 @@
 
     <div class="card reveal">
       <div class="card-icon">
-        <i class="fas fa-piggy-bank"></i>
+        <i class="fas fa-piggy-bank" aria-hidden="true"></i>
       </div>
       <h2>Финансовая грамотность</h2>
       <p>Управление собственным доходом учит планировать бюджет и откладывать деньги.</p>
@@ -168,7 +202,7 @@
   <div class="cards-grid">
     <div class="card story-card reveal">
       <div class="story-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-        <i class="fas fa-mobile-alt"></i>
+        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
       </div>
       <div class="story-content">
         <h3>Артём, 15 лет</h3>
@@ -188,7 +222,7 @@
 
     <div class="card story-card reveal">
       <div class="story-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-        <i class="fas fa-graduation-cap"></i>
+        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
       </div>
       <div class="story-content">
         <h3>Соня, 14 лет</h3>
@@ -208,7 +242,7 @@
 
     <div class="card story-card reveal">
       <div class="story-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-        <i class="fas fa-video"></i>
+        <i class="fas fa-video" aria-hidden="true"></i>
       </div>
       <div class="story-content">
         <h3>Макс, 16 лет</h3>
@@ -235,7 +269,7 @@
 
   <div class="card law-card reveal" id="law">
     <div class="law-badge">
-      <i class="fas fa-gavel"></i>
+      <i class="fas fa-gavel" aria-hidden="true"></i>
       Трудовой кодекс РФ
     </div>
     <h2>Возрастные ограничения</h2>
@@ -256,32 +290,32 @@
 
   <div class="card reveal" id="work">
     <div class="card-icon">
-      <i class="fas fa-laptop"></i>
+      <i class="fas fa-laptop" aria-hidden="true"></i>
     </div>
     <h2>Популярные направления</h2>
     <div class="work-grid">
       <div class="work-item">
-        <i class="fas fa-code"></i>
+        <i class="fas fa-code" aria-hidden="true"></i>
         <h4>Создание сайтов</h4>
       </div>
       <div class="work-item">
-        <i class="fas fa-video"></i>
+        <i class="fas fa-video" aria-hidden="true"></i>
         <h4>Монтаж видео</h4>
       </div>
       <div class="work-item">
-        <i class="fas fa-hands-helping"></i>
+        <i class="fas fa-hands-helping" aria-hidden="true"></i>
         <h4>Помощь соседям</h4>
       </div>
       <div class="work-item">
-        <i class="fas fa-chalkboard-teacher"></i>
+        <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
         <h4>Репетиторство</h4>
       </div>
       <div class="work-item">
-        <i class="fas fa-shopping-bag"></i>
+        <i class="fas fa-shopping-bag" aria-hidden="true"></i>
         <h4>Продажа онлайн</h4>
       </div>
       <div class="work-item">
-        <i class="fas fa-pen-nib"></i>
+        <i class="fas fa-pen-nib" aria-hidden="true"></i>
         <h4>Копирайтинг</h4>
       </div>
     </div>
@@ -295,11 +329,11 @@
 
   <div class="card reveal" id="risk">
     <div class="card-icon" style="background: linear-gradient(135deg, #f43f5e, #f59e0b);">
-      <i class="fas fa-shield-alt"></i>
+      <i class="fas fa-shield-alt" aria-hidden="true"></i>
     </div>
     <h2>Будьте бдительны!</h2>
     <div class="risk-alert">
-      <i class="fas fa-exclamation-triangle"></i>
+      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
       <div>
         <strong>Красные флаги:</strong> предоплата за "гарантированный" заработок, запрос личных данных, слишком высокая оплата за простую работу.
       </div>
@@ -319,28 +353,37 @@
   </div>
 
   <div class="test-container reveal" id="test">
-    <div class="test-progress">
+    <div class="test-progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Прогресс теста">
       <div class="test-progress-bar" id="testProgress"></div>
     </div>
-    <div class="test-counter" id="testCounter">Вопрос 1 из 5</div>
+    <div class="test-counter" id="testCounter" aria-live="polite">Вопрос 1 из 5</div>
 
     <div class="test-question" id="questionText">
       Можно ли официально работать в России с 14 лет?
     </div>
     <div class="test-buttons" id="testButtons">
-      <button class="test-btn test-btn-yes" onclick="checkAnswer(true)">
-        <i class="fas fa-check"></i> Да
+      <button class="test-btn test-btn-yes" onclick="checkAnswer(true)" aria-label="Ответ: Да">
+        <i class="fas fa-check" aria-hidden="true"></i> Да
       </button>
-      <button class="test-btn test-btn-no" onclick="checkAnswer(false)">
-        <i class="fas fa-times"></i> Нет
+      <button class="test-btn test-btn-no" onclick="checkAnswer(false)" aria-label="Ответ: Нет">
+        <i class="fas fa-times" aria-hidden="true"></i> Нет
       </button>
     </div>
-    <div id="result"></div>
+    <div id="result" role="status" aria-live="polite"></div>
 
     <div class="test-navigation" id="testNavigation" style="display: none;">
-      <button class="test-nav-btn" onclick="nextQuestion()">
-        Следующий вопрос <i class="fas fa-arrow-right"></i>
+      <button class="test-nav-btn test-nav-btn-prev" onclick="prevQuestion()" id="prevBtn" style="display: none;">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Назад
       </button>
+      <button class="test-nav-btn test-nav-btn-next" onclick="nextQuestion()" id="nextBtn">
+        Следующий вопрос <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Test Summary -->
+    <div class="test-summary" id="testSummary" style="display: none;">
+      <h3>Результаты теста</h3>
+      <div class="test-summary-content" id="testSummaryContent"></div>
     </div>
   </div>
 
@@ -352,7 +395,7 @@
 
   <div class="card author-card reveal" id="author">
     <div class="author-avatar">
-      <i class="fas fa-user"></i>
+      <i class="fas fa-user" aria-hidden="true"></i>
     </div>
     <h2>Беляевский Максим</h2>
     <p>Автор школьного проекта</p>
